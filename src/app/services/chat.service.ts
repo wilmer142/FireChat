@@ -23,4 +23,14 @@ export class ChatService {
         })
       )
   }
+
+  agregarMensaje(texto:string){
+    let mensaje: Mensaje = {
+      nombre: 'Demo',
+      mensaje: texto,
+      fecha: new Date().getTime()
+    }
+
+    return this.itemsCollection.add(mensaje);
+  }
 }
