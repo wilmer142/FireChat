@@ -26,7 +26,9 @@ export class ChatService {
   login(proveedor:string) {
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
+  
   logout() {
+    this.usuario = {};
     this.afAuth.auth.signOut();
   }
   cargarMensajes(){
