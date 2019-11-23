@@ -2,14 +2,9 @@
 <hr>
 
 <div class="app-mensajes" id="app-mensajes">
-    <div class="text-right">
-        <span class="badge badge-primary">Wilmer</span>
-        <p>Este es un mensaje de chat</p>
-    </div>
-
-    <div class="text-left">
-        <span class="badge badge-success">Miledy</span>
-        <p>Holiiiiiii</p>
+    <div class="text-right" *ngFor="let chat of chatService.chats">
+        <span class="badge badge-primary">user</span>
+        <p>{{ chat.mensaje }}</p>
     </div>
 </div>
 
